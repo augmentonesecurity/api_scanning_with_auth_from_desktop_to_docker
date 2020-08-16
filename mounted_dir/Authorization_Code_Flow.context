@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+    <context>
+        <name>Default Context</name>
+        <desc/>
+        <inscope>true</inscope>
+        <incregexes>\Qhttp://127.0.0.1:8084/api\E.*</incregexes>
+        <tech>
+            <include>Db</include>
+            <include>Db.CouchDB</include>
+            <include>Db.Firebird</include>
+            <include>Db.HypersonicSQL</include>
+            <include>Db.IBM DB2</include>
+            <include>Db.Microsoft Access</include>
+            <include>Db.Microsoft SQL Server</include>
+            <include>Db.MongoDB</include>
+            <include>Db.MySQL</include>
+            <include>Db.Oracle</include>
+            <include>Db.PostgreSQL</include>
+            <include>Db.SAP MaxDB</include>
+            <include>Db.SQLite</include>
+            <include>Db.Sybase</include>
+            <include>Language</include>
+            <include>Language.ASP</include>
+            <include>Language.C</include>
+            <include>Language.JSP/Servlet</include>
+            <include>Language.Java</include>
+            <include>Language.JavaScript</include>
+            <include>Language.PHP</include>
+            <include>Language.Python</include>
+            <include>Language.Ruby</include>
+            <include>Language.XML</include>
+            <include>OS</include>
+            <include>OS.Linux</include>
+            <include>OS.MacOS</include>
+            <include>OS.Windows</include>
+            <include>SCM</include>
+            <include>SCM.Git</include>
+            <include>SCM.SVN</include>
+            <include>WS</include>
+            <include>WS.Apache</include>
+            <include>WS.IIS</include>
+            <include>WS.Tomcat</include>
+        </tech>
+        <urlparser>
+            <class>org.zaproxy.zap.model.StandardParameterParser</class>
+            <config>{"kvps":"&amp;","kvs":"=","struct":[]}</config>
+        </urlparser>
+        <postparser>
+            <class>org.zaproxy.zap.model.StandardParameterParser</class>
+            <config>{"kvps":"&amp;","kvs":"=","struct":[]}</config>
+        </postparser>
+        <authentication>
+            <type>4</type>
+            <loggedin>access_token</loggedin>
+            <loggedout>unauthorized|invalid_token</loggedout>
+            <script>
+                <name>augment1security_auth_code_flow.py</name>
+                <params>YXV0aG9yaXplX3VybA==:aHR0cDovLzEyNy4wLjAuMTo4MDgxL2F1dGgvb2F1dGgvYXV0aG9yaXpl&amp;c2NvcGU=:cmVhZCB3cml0ZQ==&amp;cmVkaXJlY3RfdXJp:aHR0cDovLzEyNy4wLjAuMTo4MDgwL215aW1hZ2luYXJ5YXBwL2xvZ2luL29hdXRoMi9jb2RlL2F1Z21lbnQxc2VjdXJpdHljbGllbnQ=&amp;c3RhdGU=:YWJjMQ==&amp;Y2xpZW50X3NlY3JldA==:cGFzc3dvcmQ=&amp;dG9rZW5fdXJs:aHR0cDovLzEyNy4wLjAuMTo4MDgxL2F1dGgvb2F1dGgvdG9rZW4=&amp;Y2xpZW50X2lk:YXVnbWVudDFzZWN1cml0eWNsaWVudA==</params>
+            </script>
+        </authentication>
+        <users>
+            <user>68;true;YXVnbWVudDFzZWN1cml0eXVzZXI=;4;cGFzc3dvcmQ=:cGFzc3dvcmQ=&amp;dXNlcm5hbWU=:YXVnbWVudDFzZWN1cml0eXVzZXI=</user>
+        </users>
+        <forceduser>68</forceduser>
+        <session>
+            <type>0</type>
+        </session>
+        <authorization>
+            <type>0</type>
+            <basic>
+                <header/>
+                <body/>
+                <logic>AND</logic>
+                <code>-1</code>
+            </basic>
+        </authorization>
+    </context>
+</configuration>
